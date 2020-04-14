@@ -8,6 +8,7 @@
     </p>
     <p>Nuevo Proyecto</p>
     <p>Nueva prueba</p>
+    <h5>{{ dataPrueba }}</h5>
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
@@ -37,10 +38,18 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String,
+  },
+
+  computed: {
+    ...mapState([
+      'dataPrueba',
+    ]),
   },
 };
 </script>
