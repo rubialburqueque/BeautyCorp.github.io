@@ -8,14 +8,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  created() {
-    this.$store.dispatch('bindpruebas');
-  },
-};
-</script>
-
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

@@ -13,7 +13,7 @@ export default new Vuex.Store({
     ...vuexfireMutations,
   },
   actions: {
-    bindpruebas: firestoreAction(({ bindfirestoreRef }) => bindfirestoreRef('dataPrueba', db.collection('pruebas'))),
+    bindpruebas: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('dataPrueba', db.collection('pruebas'))),
   },
   modules: {
   },
