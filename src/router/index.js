@@ -42,6 +42,14 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Welcome.vue'),
   },
+  {
+    path: '/Recover-Password',
+    name: 'Recover-Password',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/Recover-Password.vue'),
+  },
 ];
 
 const router = new VueRouter({

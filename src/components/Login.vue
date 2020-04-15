@@ -5,7 +5,7 @@
     <input type="text" v-model="email" placeholder="usuario">
     <label for="password">Contraseña</label>
     <input type="password" v-model="password" placeholder="contraseña">
-    <router-link to="/recover-pasword">¿Olvidaste tu contraseña?</router-link>
+    <router-link to="/Recover-Password">¿Olvidaste tu contraseña?</router-link>
     <button @click="loginCount()">Iniciar Sesión</button>
     <p>¿No tienes cuenta?  <span><router-link to="/register">Registrate</router-link></span></p>
     <WriteError v-bind:typeError="error"/>
@@ -30,7 +30,9 @@ export default {
   },
   methods: {
     loginCount() {
-      if (this.email !== '' || this.email !== '') {
+      if (this.email === '' || this.email === '') {
+        this.error = 'Es necesario que todo los cuadro esten completos';
+      } else {
         singIn(this.email, this.password)
           .then(() => {
             this.$router.push('/welcome');
@@ -50,8 +52,6 @@ export default {
               this.error = 'La contraseña no es correcta';
             }
           });
-      } else {
-        this.error = 'Es necesario que todo los cuadro esten completos';
       }
     },
   },

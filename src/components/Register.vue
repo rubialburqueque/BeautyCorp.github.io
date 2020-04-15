@@ -45,15 +45,13 @@ export default {
       error: '',
     };
   },
-  watch: {
-    selected() {
-      // eslint-disable-next-line no-console
-      console.log('selected', this.selected);
-    },
-  },
   methods: {
     signIn() {
-      if (this.completeName !== '' || this.lastName !== '' || this.email !== '' || this.phone !== '' || this.password !== '' || this.confirmPassword !== '' || this.selected !== '') {
+      // eslint-disable-next-line no-console
+      console.log('selected', this.termsAndCoditions);
+      if (this.completeName === '' || this.lastName === '' || this.email === '' || this.phone === '' || this.password === '' || this.confirmPassword === '' || this.termsAndCoditions == null) {
+        this.error = 'Es necesario que todo los cuadros esten completos';
+      } else {
         createCount(this.email, this.password)
           .then(() => {
             this.$router.push('/login');
@@ -74,8 +72,6 @@ export default {
               this.error = 'La contraseña no es correcta';
             }
           });
-      } else {
-        this.error = 'Es necesario que todo los cuadro esten completos';
       }
     },
   },
