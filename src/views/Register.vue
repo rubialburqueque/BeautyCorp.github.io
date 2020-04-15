@@ -1,7 +1,10 @@
 <template>
+  <div>
+    <h1>Registrate</h1>
     <form action="" @submit="checkForm">
       <CompRegister/>
     </form>
+  </div>
 </template>
 
 <script>

@@ -1,8 +1,8 @@
 import db from './db';
 import 'firebase';
 
-const singIn = db.auth().signInWithEmailAndPassword(this.email, this.password);
+const singIn = (email, password) => db.auth().signInWithEmailAndPassword(email, password);
 
-const createCount = db.auth().createUserWithEmailAndPassword(this.email, this.password);
+const createCount = (email, password) => db.auth().createUserWithEmailAndPassword(email, password);
 
 export { singIn, createCount };

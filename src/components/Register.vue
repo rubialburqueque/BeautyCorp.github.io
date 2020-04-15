@@ -1,10 +1,17 @@
 <template>
   <div>
-    <input type="text" placeholder="nombre completo">
-    <input type="text" placeholder="apellidos">
+    <label for="completeName">Nombres</label>
+    <input type="text" v-model="completeName" placeholder="nombre completo">
+    <label for="lastName">Apellidos</label>
+    <input type="text" v-model="lastName" placeholder="apellidos">
+    <label for="email">Correo electrónico</label>
     <input type="text" v-model="email" placeholder="correo">
+    <label for="phone">Celular</label>
+    <input type="text" v-model="phone" placeholder="contraseña">
+    <label for="password">Contraseña</label>
     <input type="password" v-model="password" placeholder="contraseña">
-    <input type="text" placeholder="confirmar contraseña">
+    <label for="confirmPassword">Confirmar contraseña</label>
+    <input type="text" v-model="confirmPassword" placeholder="confirmar contraseña">
     <button @click="signIn()">Registrar</button>
   </div>
 </template>
@@ -18,6 +25,10 @@ export default {
     return {
       email: '',
       password: '',
+      completeName: '',
+      lastName: '',
+      phone: '',
+      confirmPassword: '',
     };
   },
   methods: {
