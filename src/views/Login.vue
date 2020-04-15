@@ -1,36 +1,20 @@
 <template>
-    <form action="" @submit="checkFormL">
-        <input type="text" v-model="email" placeholder="usuario">
-        <input type="password" v-model="password" placeholder="contraseña">
-        <button @click="loginCount()">Ingresar</button>
+    <form action="" @submit="checkForm">
+        <CompSingIn/>
     </form>
 </template>
 
 <script>
-import db from '../firebase/db';
-import 'firebase';
+import CompSingIn from '../components/Login.vue';
 
 export default {
   name: 'Login',
-  data() {
-    return {
-      email: '',
-      password: '',
-    };
+  components: {
+    CompSingIn,
   },
   methods: {
-    checkFormL(e) {
+    checkForm(e) {
       e.preventDefault();
-    },
-    loginCount() {
-      db.auth().signInWithEmailAndPassword(this.email, this.password)
-        .then(() => {
-          // eslint-disable-next-line no-alert
-          alert('para a la siguiente pagina');
-        }).catch((error) => {
-          // eslint-disable-next-line no-console
-          console.log(error);
-        });
     },
   },
 };
