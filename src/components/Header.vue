@@ -2,7 +2,7 @@
     <nav>
         <ul>
             <li>
-                <router-link @click="SignOut">Cerrar Sesión</router-link>
+                <router-link @click="signOut" to="/login">Cerrar Sesión</router-link>
             </li>
         </ul>
     </nav>

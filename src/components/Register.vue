@@ -33,16 +33,8 @@ export default {
   },
   methods: {
     signIn() {
-      // eslint-disable-next-line no-console
-      console.log('ingrese');
-      // eslint-disable-next-line no-console
-      console.log(this.email);
-      // eslint-disable-next-line no-console
-      console.log(this.password);
       createCount(this.email, this.password)
         .then(() => {
-          // eslint-disable-next-line no-alert
-          alert('ingreso a la siguiente pagina');
           this.$router.push('/login');
         }).catch((error) => {
           this.error = error.message;
