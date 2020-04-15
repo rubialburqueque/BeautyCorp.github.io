@@ -26,8 +26,7 @@ export default {
     loginCount() {
       singIn(this.email, this.password)
         .then(() => {
-          // eslint-disable-next-line no-alert
-          alert('para a la siguiente pagina');
+          this.$router.push('/welcome');
         }).catch((error) => {
           // eslint-disable-next-line no-console
           console.log(error);
