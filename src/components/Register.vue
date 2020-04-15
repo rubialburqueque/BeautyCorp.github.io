@@ -45,9 +45,15 @@ export default {
       error: '',
     };
   },
+  watch: {
+    selected() {
+      // eslint-disable-next-line no-console
+      console.log('selected', this.selected);
+    },
+  },
   methods: {
     signIn() {
-      if (this.completeName !== '' || this.lastName !== '' || this.email !== '' || this.phone !== '' || this.password !== '' || this.confirmPassword !== '') {
+      if (this.completeName !== '' || this.lastName !== '' || this.email !== '' || this.phone !== '' || this.password !== '' || this.confirmPassword !== '' || this.selected !== '') {
         createCount(this.email, this.password)
           .then(() => {
             this.$router.push('/login');
