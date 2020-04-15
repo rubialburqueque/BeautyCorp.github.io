@@ -12,15 +12,27 @@
     <input type="password" v-model="password" placeholder="contraseña">
     <label for="confirmPassword">Confirmar contraseña</label>
     <input type="text" v-model="confirmPassword" placeholder="confirmar contraseña">
+    <input type="checkbox" name="termsAndCoditions" v-model="termsAndCoditions">
+    <p>
+      He leído y acepto
+      <span><router-link to="/termsAndCoditions">términos y condiciones</router-link></span>
+       y las políticas de uso de datos personales
+    </p>
     <button @click="signIn()">Registrar</button>
+    <p>¿Ya tienes cuenta?<span><router-link to="/login">Iniciar Sesión</router-link></span></p>
+    <WriteError v-bind:typeError="error"/>
   </div>
 </template>
 
 <script>
-import { createCount } from '../firebase/function-firebase';
+import { createCount, newConsulter } from '../firebase/function-firebase';
+import WriteError from './Error.vue';
 
 export default {
   name: 'Register',
+  components: {
+    WriteError,
+  },
   data() {
     return {
       email: '',
@@ -29,6 +41,8 @@ export default {
       lastName: '',
       phone: '',
       confirmPassword: '',
+      termsAndCoditions: null,
+      error: '',
     };
   },
   methods: {
@@ -36,10 +50,22 @@ export default {
       createCount(this.email, this.password)
         .then(() => {
           this.$router.push('/login');
-        }).catch((error) => {
-          this.error = error.message;
+          newConsulter(this.completeName, this.lastName, this.email, this.phone);
+        }).catch((err) => {
           // eslint-disable-next-line no-console
-          console.log(error);
+          console.log(err);
+          if (err.code === 'auth/weak-password') {
+            this.error = 'Contraseña no cuenta con los caracteres mínimos permitidos (min 6 carácteres)';
+          }
+          if (err.code === 'auth/invalid-email') {
+            this.error = 'El correo ingresado es incorrecto';
+          }
+          if (err.code === 'auth/email-already-in-use') {
+            this.error = 'La cuenta ya existe';
+          }
+          if (err.code === 'auth/app-not-authorized') {
+            this.error = 'La contraseña no es correcta';
+          }
         });
     },
   },
