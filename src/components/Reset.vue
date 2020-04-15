@@ -24,7 +24,7 @@
 <script>
 /* import SignIn from '../components/SignIn/SignIn'; */
 export default {
-  name: 'RestorePassword',
+  name: 'Reset',
 };
 </script>
 <style scoped>
