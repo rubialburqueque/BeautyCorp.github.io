@@ -11,7 +11,7 @@
 
 <script>
 /* import SignIn from '../components/SignIn/SignIn'; */
-import db from '../firebase/init';
+import db from '../firebase/db';
 import 'firebase';
 
 export default {

@@ -1,5 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+
 // Get a Firestore instance
 const db = firebase.initializeApp({
   apiKey: 'AIzaSyAjOcddCtfogZNfcx1NzgO_Zcb96G615gM',

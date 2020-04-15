@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import db from '../firebase/init';
+import db from '../firebase/db';
 import 'firebase';
 
 export default {
