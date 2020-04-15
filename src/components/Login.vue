@@ -1,5 +1,7 @@
 <template>
-  <button @click="loginCount()">Ingresar</button>
+    <div>
+      <button @click="loginCount()">Ingresar</button>
+    </div>
 </template>
 
 <script>
@@ -7,7 +9,7 @@ import db from '@/firebase/db';
 import 'firebase';
 
 export default {
-  name: 'SignIn',
+  name: 'Login',
   methods: {
     loginCount() {
       db.auth().signInWithEmailAndPassword(this.email, this.password)
