@@ -19,7 +19,7 @@
        y las políticas de uso de datos personales
     </p>
     <button @click="signIn()">Registrar</button>
-    <p>¿Ya tienes cuenta?<span><router-link to="/login">Iniciar Sesión</router-link></span></p>
+    <p>¿Ya tienes cuenta? <span><router-link to="/login">Iniciar Sesión</router-link></span></p>
     <WriteError v-bind:typeError="error"/>
   </div>
 </template>
@@ -47,26 +47,30 @@ export default {
   },
   methods: {
     signIn() {
-      createCount(this.email, this.password)
-        .then(() => {
-          this.$router.push('/login');
-          newConsulter(this.completeName, this.lastName, this.email, this.phone);
-        }).catch((err) => {
+      if (this.completeName !== '' || this.lastName !== '' || this.email !== '' || this.phone !== '' || this.password !== '' || this.confirmPassword !== '') {
+        createCount(this.email, this.password)
+          .then(() => {
+            this.$router.push('/login');
+            newConsulter(this.completeName, this.lastName, this.email, this.phone);
+          }).catch((err) => {
           // eslint-disable-next-line no-console
-          console.log(err);
-          if (err.code === 'auth/weak-password') {
-            this.error = 'Contraseña no cuenta con los caracteres mínimos permitidos (min 6 carácteres)';
-          }
-          if (err.code === 'auth/invalid-email') {
-            this.error = 'El correo ingresado es incorrecto';
-          }
-          if (err.code === 'auth/email-already-in-use') {
-            this.error = 'La cuenta ya existe';
-          }
-          if (err.code === 'auth/app-not-authorized') {
-            this.error = 'La contraseña no es correcta';
-          }
-        });
+            console.log(err);
+            if (err.code === 'auth/weak-password') {
+              this.error = 'Contraseña no cuenta con los caracteres mínimos permitidos (min 6 carácteres)';
+            }
+            if (err.code === 'auth/invalid-email') {
+              this.error = 'El correo ingresado es incorrecto';
+            }
+            if (err.code === 'auth/email-already-in-use') {
+              this.error = 'La cuenta ya existe';
+            }
+            if (err.code === 'auth/app-not-authorized') {
+              this.error = 'La contraseña no es correcta';
+            }
+          });
+      } else {
+        this.error = 'Es necesario que todo los cuadro esten completos';
+      }
     },
   },
 };

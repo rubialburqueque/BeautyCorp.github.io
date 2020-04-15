@@ -30,25 +30,29 @@ export default {
   },
   methods: {
     loginCount() {
-      singIn(this.email, this.password)
-        .then(() => {
-          this.$router.push('/welcome');
-        }).catch((err) => {
+      if (this.email !== '' || this.email !== '') {
+        singIn(this.email, this.password)
+          .then(() => {
+            this.$router.push('/welcome');
+          }).catch((err) => {
           // eslint-disable-next-line no-console
-          console.log(err);
-          if (err.code === 'auth/wrong-password') {
-            this.error = 'La contraseña ingresada es incorrecta';
-          }
-          if (err.code === 'auth/invalid-email') {
-            this.error = 'El correo ingresado es incorrecto';
-          }
-          if (err.code === 'auth/email-already-in-use') {
-            this.error = 'La cuenta ya existe';
-          }
-          if (err.code === 'auth/app-not-authorized') {
-            this.error = 'La contraseña no es correcta';
-          }
-        });
+            console.log(err);
+            if (err.code === 'auth/wrong-password') {
+              this.error = 'La contraseña ingresada es incorrecta';
+            }
+            if (err.code === 'auth/invalid-email') {
+              this.error = 'El correo ingresado es incorrecto';
+            }
+            if (err.code === 'auth/email-already-in-use') {
+              this.error = 'La cuenta ya existe';
+            }
+            if (err.code === 'auth/app-not-authorized') {
+              this.error = 'La contraseña no es correcta';
+            }
+          });
+      } else {
+        this.error = 'Es necesario que todo los cuadro esten completos';
+      }
     },
   },
 };
