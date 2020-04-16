@@ -21,6 +21,6 @@
 
 <script>
 export default {
-  name: 'Offers',
+
 };
 </script>
