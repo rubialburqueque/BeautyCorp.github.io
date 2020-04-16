@@ -1,6 +1,32 @@
 <template>
   <div>
-    <h1>Inicia Sesión</h1>
+      <div class="text-center">
+      <div class="container">
+        <h2 class="h3 mb-3 font-weight-normal">Inicia Sesión</h2>
+        <br>
+        <br>
+        <h6>Código de consultora</h6>
+        <label class="sr-only">Email address</label>
+        <input type="name" placeholder="usuario"
+        id="inputEmail" class="form-control" v-model="email" required="" autofocus="">
+        <br>
+        <h6>Contraseña</h6>
+        <label class="sr-only">Password</label>
+        <input type="password"
+        id="inputPassword" class="form-control" v-model="password" required="">
+        <br>
+        <router-link to="/Recover-Password">¿Olvidaste tu contraseña?</router-link>
+        <br>
+        <div class="checkbox mb-3">
+          <button class="btn btn-lg btn-primary btn-block" @click="loginCount()">Iniciar Sesión
+          </button>
+        <br>
+        <p>¿No tienes cuenta?  <span><router-link to="/register">Registrate</router-link></span></p>
+        <WriteError v-bind:typeError="error"/>
+        </div>
+      </div>
+    </div>
+<!--     <h1>Inicia Sesión</h1>
     <label for="email">Código de consultora</label>
     <input type="text" v-model="email" placeholder="usuario">
     <label for="password">Contraseña</label>
@@ -8,7 +34,7 @@
     <router-link to="/Recover-Password">¿Olvidaste tu contraseña?</router-link>
     <button @click="loginCount()">Iniciar Sesión</button>
     <p>¿No tienes cuenta?  <span><router-link to="/register">Registrate</router-link></span></p>
-    <WriteError v-bind:typeError="error"/>
+    <WriteError v-bind:typeError="error"/> -->
   </div>
 </template>
 

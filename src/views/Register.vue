@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Registrate</h1>
-    <form action="" @submit="checkForm">
+    <h2 class="h3 mb-3 font-weight-normal">Regístrate</h2>
+    <form class="form-signin" action="" @submit="checkForm">
       <CompRegister/>
     </form>
   </div>
@@ -22,3 +22,14 @@ export default {
   },
 };
 </script>
+<style scoped>
+.text-center {
+    text-align: center !important
+  };
+.form-signin {
+    width: 50px;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    };
+</style>
