@@ -1,15 +1,20 @@
 <template>
+  <div>
+    <Header/>
     <form action="" @submit="checkForm">
         <ComponentLogin/>
     </form>
+  </div>
 </template>
 <script>
+import Header from '@/components/Header.vue';
 import ComponentLogin from '@/components/consultant/singIn/Login.vue';
 
 export default {
   name: 'Login',
   components: {
     ComponentLogin,
+    Header,
   },
   methods: {
     checkForm(e) {

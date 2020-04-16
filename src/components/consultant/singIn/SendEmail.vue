@@ -1,11 +1,14 @@
 <template>
-  <div>
-    <form action="" @submit="checkForm">
-      <label for="">Codigo de consultora o correo electrónico</label>
-      <input type="text" v-bind="email" >
-      <button>ENVIAR CORREO</button>
-    </form>
-  </div>
+  <form action="" @submit="checkForm">
+    <h8>Correo Electrónico o código de consultora</h8>
+    <label class="sr-only">Email address</label>
+    <input type="email,name" placeholder="claufer56@gmail.com o claudia127"
+        id="inputEmail" class="form-control" v-model="email" required="" autofocus="">
+    <br>
+    <div class="checkbox mb-3">
+      <button class="btn btn-lg btn-primary btn-block">ENVIAR CORREO</button>
+    </div>
+  </form>
 </template>
 
 <script>

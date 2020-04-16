@@ -2,13 +2,17 @@
 <div>
     <div class="text-center">
     <div class="container">
-    <h6 class="h3 mb-3 font-weight-normal">Cliente</h6>
+    <h2 class="h3 mb-3 font-weight-normal">Resumen de tu Pedido</h2>
+    <br>
+    <h6 class="text-title">Titular del Pedido</h6>
     <h6 class="card-subtitle mb-2 text-muted">Nombre de la cliente</h6>
+    <br>
+    <h6 class="text-title">Dirección de entrega</h6>
     <h6 class="card-subtitle mb-2 text-muted">Dirección de la cliente</h6>
-    <h6 class="card-subtitle mb-2 text-muted">Teléfono de la cliente</h6>
     <br>
+    <h6 class="text-title">Fecha de entrega</h6>
+    <h6 class="card-subtitle mb-2 text-muted">Fecha de entrega</h6>
     <br>
-    <h6 class="h3 mb-3 font-weight-normal">Pedido</h6>
     <div class="card mb-3" style="max-width: 540px;">
   <div class="row no-gutters">
     <div class="col-md-4">
@@ -20,25 +24,20 @@
         <p class="card-text">Precio</p>
         <p class="card-text">Cantidad</p>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <button class="btn btn-primary btn-sm" >+</button>
-          <button class="btn btn-primary btn-sm" >Número</button>
-          <button class="btn btn-primary btn-sm" >-</button>
+          <button class="btn btn-success btn-sm" >+</button>
+          <button class="btn btn-success btn-sm" >Número</button>
+          <button class="btn btn-success btn-sm" >-</button>
         </div>
       </div>
     </div>
   </div>
 </div>
   <div>
-  <p class="card-title">Total</p>
-  </div>
-  <div class="checkbox mb-3">
-    <button type="button" class="btn btn-outline-primary btn-block" >Agregar un Producto</button>
-    <br>
-    <button type="button" class="btn btn-outline-primary btn-block">Cancelar Pedido</button>
+  <p class="card-title">Costo de envio: Gratis</p>
+  <p class="card-title">Monton final a pagar:</p>
   </div>
     <div class="checkbox mb-3">
-    <h6>¿Tu cliente recibió tu pedido?</h6>
-    <button class="btn btn-primary btn-block" >CONFIRMAR ENTREGA
+    <button class="btn btn-success btn-block" >CONTINUAR
     </button>
   </div>
   </div>
@@ -48,6 +47,6 @@
 
 <script>
 export default {
-
+  name: 'Orders',
 };
 </script>
