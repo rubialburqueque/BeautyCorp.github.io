@@ -1,5 +1,6 @@
 <template>
     <div class="text-center">
+       <Header/>
       <div class="container">
           <form class="form-signin" action="" @submit="checkForm"></form>
           <h2 class="h3 mb-3 font-weight-normal">Restablecimiento de contraseña</h2>
@@ -9,17 +10,22 @@
               reestablecer tu contraseña</h6>
           <br>
           <SendEmail/>
+          <br>
+          <router-link to="/">Volver</router-link
+          >
       </div>
     </div>
 </template>
 
 <script>
+import Header from '@/components/Header.vue';
 import SendEmail from '@/components/consultant/singIn/SendEmail.vue';
 
 export default {
   name: 'Reset',
   components: {
     SendEmail,
+    Header,
   },
 };
 </script>

@@ -36,6 +36,14 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "register" */ '../views/consultant/SignIn/Register.vue'),
   },
+  {
+    path: '/termsAndCoditions',
+    name: 'termsAndCoditions',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "register" */ '../views/consultant/SignIn/Condition.vue'),
+  },
 ];
 
 const router = new VueRouter({

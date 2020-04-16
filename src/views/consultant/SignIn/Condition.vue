@@ -1,4 +1,6 @@
 <template>
+  <div class="text-center">
+    <h2>Términos y condiciones</h2>
     <p>
         Los siguientes términos y condiciones (los "Términos y Condiciones") rigen el uso que usted
         le dé a este sitio web y a cualquiera de los contenidos disponibles por o a través de este
@@ -70,10 +72,9 @@
           El mal uso de las Marcas Comerciales expuestas en el Sitio Web o en o a través de
           cualquiera de los servicios del Sitio Web está estrictamente prohibido.
 
-Estos Términos y Condiciones fueron corregidos 02/04/2009.
-
-
+Estos Términos y Condiciones fueron corregidos 02/04/2020.
     </p>
+  </div>
 </template>
 
 <script>
@@ -81,3 +82,9 @@ export default {
   name: 'termsAndCoditions',
 };
 </script>
+
+<style>
+.text-center {
+  text-align: center !important
+};
+</style>>

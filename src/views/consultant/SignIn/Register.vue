@@ -1,5 +1,6 @@
 <template>
   <div class="text-center">
+    <Header/>
     <h2 class="h3 mb-3 font-weight-normal">Regístrate</h2>
     <form class="form-signin" action="" @submit="checkForm">
       <CompRegister/>
@@ -8,12 +9,14 @@
 </template>
 
 <script>
+import Header from '@/components/Header.vue';
 import CompRegister from '@/components/consultant/singIn/Register.vue';
 
 export default {
   name: 'Register',
   components: {
     CompRegister,
+    Header,
   },
   methods: {
     checkForm(e) {

@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { singIn } from '@/firebase/function-firebase';
+import { singIn, getDataPersonal } from '@/firebase/function-firebase';
 import WriteError from '@/components/Error.vue';
 
 export default {
@@ -43,6 +43,7 @@ export default {
       email: '',
       password: '',
       error: '',
+      name: '',
     };
   },
   methods: {
@@ -52,7 +53,15 @@ export default {
       } else {
         singIn(this.email, this.password)
           .then(() => {
-            this.$router.push('/home');
+            getDataPersonal()
+              .then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                  if (doc.data().code === this.email || doc.data().email === this.email) {
+                    this.$store.dispatch('getName', doc.data().name);
+                    this.$router.push('/home');
+                  }
+                });
+              });
           }).catch((err) => {
             if (err.code === 'auth/wrong-password') {
               this.error = 'La contraseña ingresada es incorrecta';
