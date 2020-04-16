@@ -1,15 +1,15 @@
 <template>
     <form action="" @submit="checkForm">
-        <CompSingIn/>
+        <ComponentLogin/>
     </form>
 </template>
 <script>
-import CompSingIn from '../components/Login.vue';
+import ComponentLogin from '../components/Login.vue';
 
 export default {
   name: 'Login',
   components: {
-    CompSingIn,
+    ComponentLogin,
   },
   methods: {
     checkForm(e) {
@@ -18,6 +18,7 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .text-center {
     text-align: center !important

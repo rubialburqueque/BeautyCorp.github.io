@@ -8,12 +8,12 @@
         <h6>Código de consultora</h6>
         <label class="sr-only">Email address</label>
         <input type="name" placeholder="usuario"
-        id="inputEmail" class="form-control" v-model="email" required="" autofocus="">
+        id="inputEmail" class="form-control" v-model="email">
         <br>
         <h6>Contraseña</h6>
         <label class="sr-only">Password</label>
         <input type="password"
-        id="inputPassword" class="form-control" v-model="password" required="">
+        id="inputPassword" class="form-control" v-model="password">
         <br>
         <router-link to="/Recover-Password">¿Olvidaste tu contraseña?</router-link>
         <br>
@@ -43,7 +43,7 @@ import { singIn } from '../firebase/function-firebase';
 import WriteError from './Error.vue';
 
 export default {
-  name: 'SignIn',
+  name: 'Login',
   components: {
     WriteError,
   },
@@ -61,7 +61,7 @@ export default {
       } else {
         singIn(this.email, this.password)
           .then(() => {
-            this.$router.push('/welcome');
+            this.$router.push('/home');
           }).catch((err) => {
           // eslint-disable-next-line no-console
             console.log(err);

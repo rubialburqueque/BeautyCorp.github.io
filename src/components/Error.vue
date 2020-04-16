@@ -1,5 +1,7 @@
 <template>
+  <div>
     <span>{{ typeError }}</span>
+  </div>
 </template>
 
 <script>

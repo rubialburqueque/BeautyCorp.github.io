@@ -1,5 +1,6 @@
 <template>
-<div class="text-center">
+  <div>
+    <div class="text-center">
       <div class="container">
         <form class="form-signin" action="" @submit="checkForm"></form>
         <h2 class="h3 mb-3 font-weight-normal">
@@ -9,13 +10,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../assets/catalogo esika.jpg" class="d-block w-100" alt="...">
+      <img src="../assets/catalogo esika.jpg" class="d-block w-100" alt="50px">
     </div>
     <div class="carousel-item">
-      <img src="../assets/catalogo foto.jpg" class="d-block w-100" alt="...">
+      <img src="../assets/catalogo foto.jpg" class="d-block w-100" alt="50px">
     </div>
     <div class="carousel-item">
-      <img src="../assets/cyzonne.jpg" class="d-block w-100" alt="...">
+      <img src="../assets/cyzonne.jpg" class="d-block w-100" alt="50x">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -34,6 +35,7 @@
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>

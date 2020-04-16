@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <h1>Menu Hamburguesa</h1>
-    </div>
+  <div>
+      <img  class="blog-header-logo text-dark" alt="Vue logo" src="../assets/menu svg.svg">
+  </div>
 </template>
 
 <script>
@@ -9,3 +9,7 @@ export default {
   name: 'Burger',
 };
 </script>
+
+<style>
+
+</style>
