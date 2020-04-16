@@ -24,6 +24,11 @@
 <script>
 export default {
   name: 'Reset',
+  methods: {
+    checkForm(e) {
+      e.preventDefault();
+    },
+  },
 };
 </script>
 <style scoped>
