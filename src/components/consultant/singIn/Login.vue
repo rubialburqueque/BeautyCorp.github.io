@@ -15,7 +15,7 @@
         <input type="password"
         id="inputPassword" class="form-control" v-model="password">
         <br>
-        <router-link to="/Recover-Password">¿Olvidaste tu contraseña?</router-link>
+        <router-link to="/reset">¿Olvidaste tu contraseña?</router-link>
         <br>
         <div class="checkbox mb-3">
           <button class="btn btn-lg btn-primary btn-block" @click="loginCount()">Iniciar Sesión
@@ -26,20 +26,11 @@
         </div>
       </div>
     </div>
-<!--     <h1>Inicia Sesión</h1>
-    <label for="email">Código de consultora</label>
-    <input type="text" v-model="email" placeholder="usuario">
-    <label for="password">Contraseña</label>
-    <input type="password" v-model="password" placeholder="contraseña">
-    <router-link to="/Recover-Password">¿Olvidaste tu contraseña?</router-link>
-    <button @click="loginCount()">Iniciar Sesión</button>
-    <p>¿No tienes cuenta?  <span><router-link to="/register">Registrate</router-link></span></p>
-    <WriteError v-bind:typeError="error"/> -->
   </div>
 </template>
 
 <script>
-import { singIn } from '@/firebase/function-firebase';
+import { singIn, getDataPersonal } from '@/firebase/function-firebase';
 import WriteError from '@/components/Error.vue';
 
 export default {
@@ -52,19 +43,26 @@ export default {
       email: '',
       password: '',
       error: '',
+      name: '',
     };
   },
   methods: {
     loginCount() {
-      if (this.email === '' || this.email === '') {
+      if (this.email === '' || this.password === '') {
         this.error = 'Es necesario que todo los cuadro esten completos';
       } else {
         singIn(this.email, this.password)
           .then(() => {
-            this.$router.push('/home');
+            getDataPersonal()
+              .then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                  if (doc.data().code === this.email || doc.data().email === this.email) {
+                    this.$store.dispatch('getName', doc.data().name);
+                    this.$router.push('/home');
+                  }
+                });
+              });
           }).catch((err) => {
-          // eslint-disable-next-line no-console
-            console.log(err);
             if (err.code === 'auth/wrong-password') {
               this.error = 'La contraseña ingresada es incorrecta';
             }
