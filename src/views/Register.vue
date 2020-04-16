@@ -5,32 +5,32 @@
         <h2 class="h3 mb-3 font-weight-normal">Regístrate</h2>
         <br>
         <h6>Nombres</h6>
-        <label class="sr-only">Name</label>
+        <label class="sr-only"></label>
         <input type="name" placeholder="Claudia Fernanda"
         id="inputEmail" class="form-control" required="" autofocus="">
         <br>
         <h6>Apellidos</h6>
-        <label class="sr-only">LastName</label>
+        <label class="sr-only"></label>
         <input type="name" placeholder="Ramos Ochoa"
         id="inputEmail" class="form-control" required="" autofocus="">
         <br>
         <h6>Correo Electrónico</h6>
-        <label class="sr-only">Email address</label>
+        <label class="sr-only"></label>
         <input type="email" placeholder="claufer56@gmail.com"
         id="inputEmail" class="form-control" v-model="email" required="" autofocus="">
         <br>
         <h6>Teléfono</h6>
-        <label class="sr-only">Email address</label>
+        <label class="sr-only"></label>
         <input type="name" placeholder="998 045 658"
-        id="inputEmail" class="form-control" v-model="email" required="" autofocus="">
+        id="inputEmail" class="form-control"  required="" autofocus="">
         <br>
         <h6>Contraseña</h6>
-        <label class="sr-only">Password</label>
+        <label class="sr-only"></label>
         <input type="password"
         id="inputPassword" class="form-control" v-model="password" required="">
         <br>
         <h6>Confirmar contraseña</h6>
-        <label class="sr-only">PasswordOk</label>
+        <label class="sr-only"></label>
         <input type="password"
         id="inputPassword" class="form-control" v-model="passwordOK" required="">
         <br>
