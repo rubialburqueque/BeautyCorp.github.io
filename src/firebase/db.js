@@ -1,16 +1,16 @@
-import firebase from 'firebase/app';
+import * as firebase from 'firebase/app';
 import 'firebase/firestore';
 
 // Get a Firestore instance
 const db = firebase.initializeApp({
-  apiKey: 'AIzaSyAjOcddCtfogZNfcx1NzgO_Zcb96G615gM',
-  authDomain: 'beauty-proyect.firebaseapp.com',
-  databaseURL: 'https://beauty-proyect.firebaseio.com',
-  projectId: 'beauty-proyect',
-  storageBucket: 'beauty-proyect.appspot.com',
-  messagingSenderId: '575562706309',
-  appId: '1:575562706309:web:4e1b7395e17f6e3c1128ec',
-  measurementId: 'G-DRGW0YTV6G',
+  apiKey: 'AIzaSyAZHUCFZ6X1v-V4IzVgoflz6fg9YETBR9M',
+  authDomain: 'beautycorp-a8012.firebaseapp.com',
+  databaseURL: 'https://beautycorp-a8012.firebaseio.com',
+  projectId: 'beautycorp-a8012',
+  storageBucket: 'beautycorp-a8012.appspot.com',
+  messagingSenderId: '915148224057',
+  appId: '1:915148224057:web:d176dca19cfcf5d248bfe8',
+  measurementId: 'G-5LVWV0T0C6',
 });
 
 export default db;
