@@ -39,8 +39,8 @@
 </template>
 
 <script>
-import { singIn } from '../firebase/function-firebase';
-import WriteError from './Error.vue';
+import { singIn } from '@/firebase/function-firebase';
+import WriteError from '@/components/Error.vue';
 
 export default {
   name: 'Login',

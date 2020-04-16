@@ -4,7 +4,7 @@
         <br>
         <h6>Nombres</h6>
         <label class="sr-only">Name</label>
-        <input type="texto" placeholder="nombre completo"
+        <input type="texto" placeholder="Claudia"
         id="inputEmail" class="form-control" v-model="completeName">
         <br>
         <h6>Apellidos</h6>
@@ -44,7 +44,7 @@
           <button class="btn btn-lg btn-primary btn-block" @click="signIn()">Registrarse
           </button>
         <br>
-        <p>¿Ya tienes cuenta? <span><router-link to="/login">Iniciar Sesión</router-link></span></p>
+        <p>¿Ya tienes cuenta? <span><router-link to="/">Iniciar Sesión</router-link></span></p>
          <WriteError v-bind:typeError="error"/>
         </div>
       </div>
@@ -75,8 +75,8 @@
 </template>
 
 <script>
-import { createCount, newConsulter } from '../firebase/function-firebase';
-import WriteError from './Error.vue';
+import { createCount, newConsulter } from '@/firebase/function-firebase';
+import WriteError from '@/components/Error.vue';
 
 export default {
   name: 'Register',
@@ -104,7 +104,7 @@ export default {
       } else {
         createCount(this.email, this.password)
           .then(() => {
-            this.$router.push('/login');
+            this.$router.push('/');
             newConsulter(this.completeName, this.lastName, this.email, this.phone);
           }).catch((err) => {
           // eslint-disable-next-line no-console

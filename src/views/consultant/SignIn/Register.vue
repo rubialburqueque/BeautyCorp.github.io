@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import CompRegister from '../components/Register.vue';
+import CompRegister from '@/components/consultant/singIn/Register.vue';
 
 export default {
   name: 'Register',

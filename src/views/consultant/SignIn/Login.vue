@@ -4,7 +4,7 @@
     </form>
 </template>
 <script>
-import ComponentLogin from '../components/Login.vue';
+import ComponentLogin from '@/components/consultant/singIn/Login.vue';
 
 export default {
   name: 'Login',

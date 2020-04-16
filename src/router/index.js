@@ -10,15 +10,15 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "login" */ '../views/Home.vue'),
+    component: () => import(/* webpackChunkName: "login" */ '../views/consultant/catalogue/Home.vue'),
   },
   {
-    path: '/login',
+    path: '/',
     name: 'Login',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue'),
+    component: () => import(/* webpackChunkName: "login" */ '../views/consultant/SignIn/Login.vue'),
   },
   {
     path: '/reset',
@@ -26,7 +26,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "reset" */ '../views/Reset.vue'),
+    component: () => import(/* webpackChunkName: "reset" */ '../views/consultant/SignIn/Reset.vue'),
   },
   {
     path: '/register',
@@ -34,7 +34,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "register" */ '../views/Register.vue'),
+    component: () => import(/* webpackChunkName: "register" */ '../views/consultant/SignIn/Register.vue'),
   },
 ];
 

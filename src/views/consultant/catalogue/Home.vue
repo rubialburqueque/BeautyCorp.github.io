@@ -6,9 +6,9 @@
   </div>
 </template>
 <script>
-import Header from '../components/Header.vue';
-import Body from '../components/Body.vue';
-import MagazineView from '../components/MagazineViews.vue';
+import Header from '@/components/Header.vue';
+import Body from '@/components/Body.vue';
+import MagazineView from '@/components/consultant/catalogue/MagazineViews.vue';
 
 export default {
   name: 'Home',
