@@ -1,17 +1,15 @@
 <template>
-
-<div class="text-center">
-  <CompRegister/>
-    </div>
+    <form action="" @submit="checkForm">
+        <ComponentLogin/>
+    </form>
 </template>
-
 <script>
-import CompRegister from '../components/Register.vue';
+import ComponentLogin from '@/components/consultant/singIn/Login.vue';
 
 export default {
-  name: 'Register',
+  name: 'Login',
   components: {
-    CompRegister,
+    ComponentLogin,
   },
   methods: {
     checkForm(e) {
@@ -20,6 +18,7 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .text-center {
     text-align: center !important

@@ -1,15 +1,19 @@
 <template>
-    <form action="" @submit="checkForm">
-        <Login/>
+  <div>
+    <h2 class="h3 mb-3 font-weight-normal">Regístrate</h2>
+    <form class="form-signin" action="" @submit="checkForm">
+      <CompRegister/>
     </form>
+  </div>
 </template>
+
 <script>
-import Login from '../components/Login.vue';
+import CompRegister from '@/components/consultant/singIn/Register.vue';
 
 export default {
-  name: 'Login',
+  name: 'Register',
   components: {
-    Login,
+    CompRegister,
   },
   methods: {
     checkForm(e) {
