@@ -1,5 +1,6 @@
 <template>
-<div class="text-center">
+  <div>
+    <div class="text-center">
       <div class="container">
         <form class="form-signin" action="" @submit="checkForm"></form>
         <h2 class="h3 mb-3 font-weight-normal">
@@ -34,6 +35,7 @@
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>

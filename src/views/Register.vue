@@ -1,4 +1,5 @@
 <template>
+
 <div class="text-center">
       <div class="container">
         <form class="form-signin" action="" @submit="checkForm"></form>
@@ -47,49 +48,22 @@
           </button>
         <br>
         <label>¿Ya tienes cuenta? <a class="text-muted" href="#">INICIAR SESSIÓN</a></label>
-
-          <HelloWorld msg="Welcome to Your Vue.js App"/>
         </div>
       </div>
     </div>
 </template>
 
 <script>
-/* import SignIn from '../components/SignIn/SignIn'; */
-import db from '../firebase/db';
-import 'firebase';
+import CompRegister from '../components/Register.vue';
 
 export default {
   name: 'Register',
-  /*   components: {
-     SignIn }, */
-  data() {
-    return {
-      email: '',
-      password: '',
-    };
+  components: {
+    CompRegister,
   },
   methods: {
     checkForm(e) {
       e.preventDefault();
-    },
-    signIn() {
-      // eslint-disable-next-line no-console
-      console.log('ingrese');
-      // eslint-disable-next-line no-console
-      console.log(this.email);
-      // eslint-disable-next-line no-console
-      console.log(this.password);
-      db.auth().createUserWithEmailAndPassword(this.email, this.password)
-        .then(() => {
-          // eslint-disable-next-line no-alert
-          alert('ingreso a la siguiente pagina');
-          this.$router.push('/login');
-        }).catch((error) => {
-          this.error = error.message;
-          // eslint-disable-next-line no-console
-          console.log(error);
-        });
     },
   },
 };
