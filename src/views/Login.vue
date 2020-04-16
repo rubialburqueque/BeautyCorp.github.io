@@ -1,15 +1,15 @@
 <template>
     <form action="" @submit="checkForm">
-        <CompSingIn/>
+        <Login/>
     </form>
 </template>
 <script>
-import CompSingIn from '../components/Login.vue';
+import Login from '../components/Login.vue';
 
 export default {
   name: 'Login',
   components: {
-    CompSingIn,
+    Login,
   },
   methods: {
     checkForm(e) {

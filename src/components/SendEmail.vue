@@ -1,14 +1,16 @@
 <template>
-  <form action="" @submit="checkForm">
-    <label for="">Codigo de consultora o correo electrónico</label>
-    <input type="text" v-bind="email" >
-    <button>ENVIAR CORREO</button>
-  </form>
+  <div>
+    <form action="" @submit="checkForm">
+      <label for="">Codigo de consultora o correo electrónico</label>
+      <input type="text" v-bind="email" >
+      <button>ENVIAR CORREO</button>
+    </form>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Sended-Email',
+  name: 'SendEmail',
   data() {
     return {
       email: '',

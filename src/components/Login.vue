@@ -1,10 +1,6 @@
 <template>
     <div>
       <div>
-          <button @click="loginCount()">Ingresar</button>
-      </div>
-
-      <div>
         <h1>Inicia Sesión</h1>
         <label for="email">Código de consultora</label>
         <input type="text" v-model="email" placeholder="usuario">
