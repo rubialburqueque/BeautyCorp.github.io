@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import SendEmail from '../components/SendEmail.vue';
+import SendEmail from '@/components/consultant/singIn/SendEmail.vue';
 
 export default {
   name: 'Reset',

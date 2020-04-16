@@ -3,10 +3,6 @@
     <div id="nav">
       <router-link to="/">Login</router-link> |
       <router-link to="/register">Register</router-link> |
-      <router-link to="/reset">Reset Password</router-link> |
-      <router-link class="btn btn-primary"
-       to="/home">Home</router-link>
-
     </div>
     <router-view/>
   </div>

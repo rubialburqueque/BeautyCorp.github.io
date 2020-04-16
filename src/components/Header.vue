@@ -1,4 +1,11 @@
 <template>
+<!--     <nav>
+        <ul>
+            <li>
+                <router-link @click="signOut" to="/login">Cerrar Sesión</router-link>
+            </li>
+        </ul>
+    </nav> -->
 <div class="text-center">
   <div class="container">
     <header class="blog-header py-3">
@@ -7,7 +14,7 @@
         <Burger/>
         </div>
         <div class="col-4 text-center">
-          <img  class="blog-header-logo text-dark" alt="Vue logo" src="../assets/logo.png">
+          <img  class="blog-header-logo text-dark" alt="logo" src="../assets/logo.png">
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center">
         </div>
@@ -27,6 +34,7 @@
         <a class="p-2 text-muted" href="#">Vista10</a>
         <a class="p-2 text-muted" href="#">Vista11</a>
         <a class="p-2 text-muted" href="#">Vista12</a>
+        <router-link @click="signOut" to="/">Cerrar Sesión</router-link>
       </nav>
     </div>
   </div>
@@ -40,6 +48,12 @@ export default {
   name: 'Header',
   components: {
     Burger,
+  },
+  methods: {
+    signOut() {
+      // eslint-disable-next-line no-console
+      console.log('salir de sesion');
+    },
   },
 };
 </script>
