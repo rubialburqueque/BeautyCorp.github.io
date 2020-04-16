@@ -3,8 +3,6 @@
     <div class="text-center">
       <div class="container">
         <form class="form-signin" action="" @submit="checkForm"></form>
-        <h2 class="h3 mb-3 font-weight-normal">
-        Bienvenida (colocar aqui nombre de la consultora)</h2>
         <br>
         <h6>Catálogo Virtual</h6>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

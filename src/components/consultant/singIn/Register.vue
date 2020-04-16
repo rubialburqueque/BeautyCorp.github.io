@@ -32,6 +32,11 @@
         <input type="password"
         id="inputPassword" class="form-control" v-model="confirmPassword">
         <br>
+        <h6>Código</h6>
+        <label class="sr-only">Code</label>
+        <input type="text"
+        id="code" class="form-control" v-model="code">
+        <br>
         <div class="checkbox mb-3">
         <label>
         <input type="checkbox" v-model="termsAndCoditions"> He leido y acepto
@@ -49,29 +54,6 @@
         </div>
       </div>
     </div>
- <!--  <div>
-    <label for="completeName">Nombres</label>
-    <input type="text" v-model="completeName" placeholder="nombre completo">
-    <label for="lastName">Apellidos</label>
-    <input type="text" v-model="lastName" placeholder="apellidos">
-    <label for="email">Correo electrónico</label>
-    <input type="text" v-model="email" placeholder="correo">
-    <label for="phone">Celular</label>
-    <input type="text" v-model="phone" placeholder="contraseña">
-    <label for="password">Contraseña</label>
-    <input type="password" v-model="password" placeholder="contraseña">
-    <label for="confirmPassword">Confirmar contraseña</label>
-    <input type="text" v-model="confirmPassword" placeholder="confirmar contraseña">
-    <input type="checkbox" name="termsAndCoditions" v-model="termsAndCoditions">
-    <p>
-      He leído y acepto
-      <span><router-link to="/termsAndCoditions">términos y condiciones</router-link></span>
-       y las políticas de uso de datos personales
-    </p>
-    <button @click="signIn()">Registrar</button>
-    <p>¿Ya tienes cuenta? <span><router-link to="/login">Iniciar Sesión</router-link></span></p>
-    <WriteError v-bind:typeError="error"/>
-  </div> -->
 </template>
 
 <script>
@@ -93,19 +75,28 @@ export default {
       confirmPassword: '',
       termsAndCoditions: null,
       error: '',
+      code: '',
     };
   },
   methods: {
     signIn() {
       // eslint-disable-next-line no-console
       console.log('selected', this.termsAndCoditions);
-      if (this.completeName === '' || this.lastName === '' || this.email === '' || this.phone === '' || this.password === '' || this.confirmPassword === '' || this.termsAndCoditions == null) {
+      if (this.completeName === '' || this.lastName === '' || this.email === '' || this.phone === '' || this.password === '' || this.confirmPassword === '' || this.termsAndCoditions == null || this.code === '') {
         this.error = 'Es necesario que todo los cuadros esten completos';
       } else {
         createCount(this.email, this.password)
           .then(() => {
+            newConsulter(this.completeName, this.lastName, this.email, this.phone, this.code);
+            const storeData = {
+              name: this.completeName,
+              lastname: this.lastName,
+              email: this.email,
+              phone: this.phone,
+              code: this.code,
+            };
             this.$router.push('/');
-            newConsulter(this.completeName, this.lastName, this.email, this.phone);
+            this.$store.dispatch('savedata', storeData);
           }).catch((err) => {
           // eslint-disable-next-line no-console
             console.log(err);

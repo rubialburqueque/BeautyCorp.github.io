@@ -5,11 +5,18 @@ const singIn = (email, password) => db.auth().signInWithEmailAndPassword(email, 
 
 const createCount = (email, password) => db.auth().createUserWithEmailAndPassword(email, password);
 
-const newConsulter = (name, lastname, email, phone) => db.firestore().collection('consulter').add({
+const newConsulter = (name, lastname, email, phone, code) => db.firestore().collection('consulter').add({
   name,
   lastname,
   email,
   phone,
+  code,
 });
 
-export { singIn, createCount, newConsulter };
+const getDataPersonal = () => db.firestore().collection('consulter').get();
+
+const signOff = () => db.auth.signOff();
+
+export {
+  singIn, createCount, newConsulter, getDataPersonal, signOff,
+};
