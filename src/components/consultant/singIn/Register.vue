@@ -49,29 +49,6 @@
         </div>
       </div>
     </div>
- <!--  <div>
-    <label for="completeName">Nombres</label>
-    <input type="text" v-model="completeName" placeholder="nombre completo">
-    <label for="lastName">Apellidos</label>
-    <input type="text" v-model="lastName" placeholder="apellidos">
-    <label for="email">Correo electrónico</label>
-    <input type="text" v-model="email" placeholder="correo">
-    <label for="phone">Celular</label>
-    <input type="text" v-model="phone" placeholder="contraseña">
-    <label for="password">Contraseña</label>
-    <input type="password" v-model="password" placeholder="contraseña">
-    <label for="confirmPassword">Confirmar contraseña</label>
-    <input type="text" v-model="confirmPassword" placeholder="confirmar contraseña">
-    <input type="checkbox" name="termsAndCoditions" v-model="termsAndCoditions">
-    <p>
-      He leído y acepto
-      <span><router-link to="/termsAndCoditions">términos y condiciones</router-link></span>
-       y las políticas de uso de datos personales
-    </p>
-    <button @click="signIn()">Registrar</button>
-    <p>¿Ya tienes cuenta? <span><router-link to="/login">Iniciar Sesión</router-link></span></p>
-    <WriteError v-bind:typeError="error"/>
-  </div> -->
 </template>
 
 <script>
