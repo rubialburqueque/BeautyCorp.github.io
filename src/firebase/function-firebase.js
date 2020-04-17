@@ -1,11 +1,11 @@
-import db from './db';
-import 'firebase';
+import firebase from 'firebase';
 
-const singIn = (email, password) => db.auth().signInWithEmailAndPassword(email, password);
+const singIn = (email, password) => firebase.auth().signInWithEmailAndPassword(email, password);
 
-const createCount = (email, password) => db.auth().createUserWithEmailAndPassword(email, password);
+const createCount = (email, password) => firebase.auth()
+  .createUserWithEmailAndPassword(email, password);
 
-const newConsulter = (name, lastname, email, phone, code) => db.firestore().collection('consulter').add({
+const newConsulter = (name, lastname, email, phone, code) => firebase.firestore().collection('consulter').add({
   name,
   lastname,
   email,
@@ -13,9 +13,9 @@ const newConsulter = (name, lastname, email, phone, code) => db.firestore().coll
   code,
 });
 
-const getDataPersonal = () => db.firestore().collection('consulter').get();
+const getDataPersonal = () => firebase.firestore().collection('consulter').get();
 
-const signOff = () => db.auth.signOff();
+const signOff = () => firebase.auth.signOff();
 
 export {
   singIn, createCount, newConsulter, getDataPersonal, signOff,

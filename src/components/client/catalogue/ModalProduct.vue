@@ -59,4 +59,4 @@ export default {
 .text-center {
   text-align: center !important
 };
-</style>>
+</style>

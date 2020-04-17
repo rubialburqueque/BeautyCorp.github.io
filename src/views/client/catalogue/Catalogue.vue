@@ -9,6 +9,9 @@ import ComponentCatalogue from '@/components/client/catalogue/Catalogue.vue';
 
 export default {
   name: 'Products',
+  created() {
+    this.$store.dispatch('bindEsika');
+  },
   components: {
     ComponentCatalogue,
   },
