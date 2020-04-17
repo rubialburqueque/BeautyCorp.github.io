@@ -1,24 +1,24 @@
-import db from './db';
-import 'firebase';
+import firebase from 'firebase';
 
-const singIn = (email, password) => db.auth().signInWithEmailAndPassword(email, password);
+const singIn = (email, password) => firebase.auth().signInWithEmailAndPassword(email, password);
 
-const createCount = (email, password) => db.auth().createUserWithEmailAndPassword(email, password);
+const createCount = (email, password) => firebase.auth()
+  .createUserWithEmailAndPassword(email, password);
 
-const newConsulter = (name, lastname, email, phone, code) => db.firestore().collection('consulter').add({
+const newConsulter = (name, lastname, email, phone, code) => firebase.firestore().collection('consulter').add({
   name,
   lastname,
   email,
   phone,
   code,
 });
-/* db.database().ref().child(''); */
-const getDataPersonal = () => db.firestore().collection('consulter').get();
 
-const signOff = () => db.auth.signOff();
+const getDataPersonal = () => firebase.firestore().collection('consulter').get();
 
-const imagenFirebase = () => db.firestore.collection('Esika').get();
+const SignOut = () => firebase.auth().signOff();
+
+const catalogueFirebase = () => firebase.firestore().collection('Ofertas').get();
 
 export {
-  singIn, createCount, newConsulter, getDataPersonal, signOff, imagenFirebase,
+  singIn, createCount, newConsulter, getDataPersonal, SignOut, catalogueFirebase,
 };

@@ -2,13 +2,12 @@
 <div>
   <div class="text-center">
       <div class="container">
-        <form class="form-signin" action="" @submit="checkForm"></form>
         <br>
         <h6>Catálogo Virtual</h6>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
               <div class="carousel-item active">
-                <img :src="getImgUrl(el.img)" class=" w-40" alt="30px">
+                <img src="@/assets/catalogo foto.jpg" class=" w-40" alt="30px">
               </div>
               <div class="carousel-item">
                 <img src="@/assets/catalogo foto.jpg" class=" w-40" alt="30px">

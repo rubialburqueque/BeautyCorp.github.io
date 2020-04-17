@@ -2,7 +2,6 @@
   <div>
     <div class="text-center">
       <div class="container">
-        <form class="form-signin" action="" @submit="checkForm"></form>
         <br>
         <h6>Catálogo Virtual</h6>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -42,6 +41,7 @@ export default {
   name: 'MagazineViews',
 };
 </script>
+
 <style scoped>
 .text-center {
     text-align: center !important

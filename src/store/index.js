@@ -1,13 +1,14 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { vuexfireMutations } from 'vuexfire';
+import { vuexfireMutations, firestoreAction } from 'vuexfire';
+import db from '../firebase/db';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
     name: '',
-    dataPrueba: [],
+    dataEsika: [],
     consultent: [],
   },
   mutations: {
@@ -20,6 +21,7 @@ export default new Vuex.Store({
     },
   },
   actions: {
+    bindEsika: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('dataEsika', db.collection('Esika'))),
     getName(context, name) {
       context.commit('saveName', name);
     },
