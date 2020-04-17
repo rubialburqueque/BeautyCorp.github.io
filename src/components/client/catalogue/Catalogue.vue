@@ -9,7 +9,7 @@
       <div class="col-md-8">
         <div class="card-body">
           <p class="card-text">Maquillaje</p>
-          <h5 class="card-title">Set de sombras</h5>
+          <h5 class="card-title"></h5>
           <strong class="card-text">60</strong>
         </div>
         <router-link to="products" type="button" class="btn btn-success">Ver Producto</router-link>
