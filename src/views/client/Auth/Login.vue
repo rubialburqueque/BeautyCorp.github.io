@@ -12,5 +12,8 @@ export default {
   components: {
     LoginCustomer,
   },
+  created() {
+    this.$store.dispatch('bindconsulter');
+  },
 };
 </script>

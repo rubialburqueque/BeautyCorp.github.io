@@ -11,6 +11,7 @@ export default new Vuex.Store({
     dataEsika: [],
     dataOffert: [],
     consultent: [],
+    dataConsulter: [],
   },
   mutations: {
     ...vuexfireMutations,
@@ -23,6 +24,7 @@ export default new Vuex.Store({
   },
   actions: {
     bindEsika: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('dataEsika', db.collection('Esika'))),
+    binconsulter: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('dataConsulter', db.collection('consulter'))),
     bindOfert: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('dataOffert', db.collection('Ofertas'))),
     getName(context, name) {
       context.commit('saveName', name);

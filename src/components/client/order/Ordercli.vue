@@ -28,8 +28,10 @@
   <p class="card-title">Monton final a pagar:</p>
   </div>
     <div class="checkbox mb-3">
-    <button class="btn btn-success btn-block" >CONTINUAR
+    <button class="btn btn-success btn-block">REALIZAR PEDIDO
     </button>
+    <router-link to="/datos" class="btn btn-success btn-block">CONTINUAR
+    </router-link>
   </div>
   </div>
     </div>
