@@ -1,10 +1,12 @@
 <template>
   <div class="text-center">
     <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-toggle="modal"
-          data-target="#exampleModal">TERMINOS Y CONDICIONES
-          </button>
+      <div class="conditions">
+          <p data-toggle="modal"
+          data-target="#exampleModal">"TERMINOS Y CONDICIONES"
+          </p>
           <!-- Modal -->
+      </div>
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
       aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -118,6 +120,10 @@ export default {
 </script>
 
 <style>
+.conditions {
+  text-decoration-line: underline;
+  text-decoration-color: blue !important
+};
 .text-center {
   text-align: center !important
 };

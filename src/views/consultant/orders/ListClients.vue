@@ -1,19 +1,22 @@
 <template>
   <div class="home">
-    <ListClients/>
+    <HeaderBurger/>
+    <ListCLients/>
   </div>
 </template>
 
 <script>
-import ListClients from '@/components/consultant/orders/ListClients.vue';
+import HeaderBurger from '@/components/HeaderBurger.vue';
+import ListCLients from '@/components/consultant/orders/ListClients.vue';
 
 export default {
-  name: 'ListCLients',
+  name: 'Clients',
+  components: {
+    HeaderBurger,
+    ListCLients,
+  },
   created() {
     this.$store.dispatch('bindClientes');
-  },
-  components: {
-    ListCLients,
   },
 };
 </script>

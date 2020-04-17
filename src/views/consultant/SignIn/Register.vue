@@ -37,5 +37,8 @@ export default {
 };
 .register{
   text-align: center;
+};
+::-webkit-input-placeholder {
+   text-align: center;
 }
 </style>

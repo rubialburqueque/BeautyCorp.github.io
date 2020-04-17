@@ -1,15 +1,18 @@
 <template>
     <div>
-        <LoginCustomer/>
+      <Header/>
+      <LoginCustomer/>
     </div>
 </template>
 
 <script>
-import LoginCustomer from '@/components/client/LoginCustomer.vue';
+import Header from '@/components/Header.vue';
+import LoginCustomer from '@/components/client/auth/LoginCustomer.vue';
 
 export default {
   name: 'LoginCli',
   components: {
+    Header,
     LoginCustomer,
   },
   created() {

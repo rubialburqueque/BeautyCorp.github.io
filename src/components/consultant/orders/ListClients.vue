@@ -5,7 +5,8 @@
     <h2 class="h3 mb-3 font-weight-normal">Mis Pedidos</h2>
     <br>
     <br>
-    <div v-for="(elemento, index) in dataClientes" :key="index.id" class="card mb-3" style="max-width: 540px;">
+    <div v-for="(elemento, index) in dataClientes" :key="index.id"
+    class="card mb-3" style="max-width: 540px;">
     <div class="row no-gutters">
       <div class="col-md-4">
         <img src="@/assets/cliente.svg" class="card-img" alt="20px">

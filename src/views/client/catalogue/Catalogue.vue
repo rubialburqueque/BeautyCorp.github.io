@@ -7,8 +7,7 @@
 
 <script>
 import ComponentCatalogue from '@/components/client/catalogue/Catalogue.vue';
-import Header from '@/components/Header.vue';
-
+import Header from '@/components/HeaderCli.vue';
 
 export default {
   name: 'Products',

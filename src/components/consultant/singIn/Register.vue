@@ -118,3 +118,9 @@ export default {
   },
 };
 </script>
+
+<style>
+::-webkit-input-placeholder {
+   text-align: center;
+};
+</style>
