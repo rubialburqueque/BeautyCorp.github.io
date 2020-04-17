@@ -4,7 +4,10 @@
     <div class="container">
     <h2 class="h3 mb-3 font-weight-normal">Mis Beauty puntos</h2>
     <br>
-
+      <div v-for="{name} in product" :key="name">
+        <p>{{name}}</p>
+        <img :src="foto" alt="">
+      </div>
     <br>
     <h6>Nivel 2</h6>
     <h1 class="card-body text-primary">Cantidad de puntos</h1>
@@ -22,7 +25,29 @@
 </template>
 
 <script>
+import { imagenFirebase } from '@/firebase/function-firebase';
+
 export default {
   name: 'Offers',
+  data() {
+    return {
+      product: [],
+      foto: this.product.foto,
+    };
+  },
+  methods: {
+    watchImagens() {
+      imagenFirebase()
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            const object = {
+              name: doc.data().Nombre,
+              foto: doc.data().img,
+            };
+            this.product.push(object);
+          });
+        });
+    },
+  },
 };
 </script>

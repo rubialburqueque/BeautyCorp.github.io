@@ -12,11 +12,13 @@ const newConsulter = (name, lastname, email, phone, code) => db.firestore().coll
   phone,
   code,
 });
-
+/* db.database().ref().child(''); */
 const getDataPersonal = () => db.firestore().collection('consulter').get();
 
 const signOff = () => db.auth.signOff();
 
+const imagenFirebase = () => db.firestore.collection('Esika').get();
+
 export {
-  singIn, createCount, newConsulter, getDataPersonal, signOff,
+  singIn, createCount, newConsulter, getDataPersonal, signOff, imagenFirebase,
 };
