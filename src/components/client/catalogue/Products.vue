@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header/>
     <div class="text-center">
         <div class="container">
           <br>
@@ -72,14 +71,12 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue';
 import ModalProduct from './ModalProduct.vue';
 // import firebase from 'firebase';
 
 export default {
   name: 'Products',
   components: {
-    Header,
     ModalProduct,
   },
   data() {

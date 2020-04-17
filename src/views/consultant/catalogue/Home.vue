@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-<!--     <Burger/> -->
     <Header/>
     <Body/>
   </div>
