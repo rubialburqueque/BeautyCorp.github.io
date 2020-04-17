@@ -52,6 +52,38 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "products" */ '../views/client/catalogue/Catalogue.vue'),
   },
+  {
+    path: '/confirm',
+    name: 'Confirm',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "products" */ '../views/client/order/Confirm.vue'),
+  },
+  {
+    path: '/ordercli',
+    name: 'Ordercli',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "products" */ '../views/client/order/Ordercli.vue'),
+  },
+  {
+    path: '/logincli',
+    name: 'LoginCli',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "reset" */ '../views/client/Auth/Login.vue'),
+  },
+  {
+    path: '/datos',
+    name: 'Registercli',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "reset" */ '../views/client/Auth/Registercli.vue'),
+  },
 ];
 
 const router = new VueRouter({

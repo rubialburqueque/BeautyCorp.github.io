@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header/>
     <div class="text-center">
         <div class="container">
           <form class="form-signin" action="" @submit="checkForm"></form>
@@ -73,14 +72,12 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue';
 import ModalProduct from './ModalProduct.vue';
 // import firebase from 'firebase';
 
 export default {
   name: 'Products',
   components: {
-    Header,
     ModalProduct,
   },
   data() {
