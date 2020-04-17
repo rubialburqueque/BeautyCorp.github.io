@@ -6,13 +6,10 @@
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/PRODUCTOS%2Fbody%20blooom.jpg?alt=media&token=990da41b-c9f7-4e04-bb61-dc39125be4cf">
+                  <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/PRODUCTOS%20ESIKA%2Fmaquillaje.jpg?alt=media&token=af5ec3dd-f0e2-4dd2-9e02-a7a2d8329143">
                 </div>
                 <div class="carousel-item">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/PRODUCTOS%2Fperfume%20flyrty.jpg?alt=media&token=a6999531-6861-42bd-ad74-b41642dcc28e">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/PRODUCTOS%2Fstudio%20primer.jpg?alt=media&token=360b774e-7551-4bc4-97f7-f177134bb6a2">
+                  <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/PRODUCTOS%20ESIKA%2Fmaquillajemujer.jpg?alt=media&token=173ff504-5f59-484b-9b74-eee29400d0c8">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls"
@@ -28,21 +25,22 @@
           </div>
           <br>
           <div class="checkbox mb-3">
-            <h6>Esika</h6>
+            <h6>Te ofrece diferentes tipos de acabados: mate, semisatinado
+              y metalizado para que puedas crear diversos maquillajes con muchos estilos.</h6>
           </div>
         </div>
       </div>
       <ul class="list-group mb-3">
         <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div v-for="(elemento, index) in dataEsika" :key="index.id">
-            <h6 class="my-0">{{ elemento.Nombre }}</h6>
+          <div>
+            <h6 class="my-0"></h6>
             <div>
             <img src="@/assets/star.svg" alt="50x">
             <img src="@/assets/star.svg" alt="50x">
             <img src="@/assets/star.svg" alt="50x">
             <img src="@/assets/star.svg" alt="50x">
             </div>
-            <small class="text-muted">{{ elemento.Description }}</small>
+            <h9 class="text-muted">Set de Sombras</h9>
                     <div class="select is-rounded is-small">
                   <select>
                     <option value="1">1</option>
@@ -63,7 +61,7 @@
                   </select>
                   <ModalProduct/>
                 </div>
-                <strong>{{ elemento.Precio }}</strong>
+                <strong>60.00</strong>
           </div>
           </li>
       </ul>

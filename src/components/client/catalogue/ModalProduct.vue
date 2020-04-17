@@ -22,13 +22,13 @@
         <div class="card mb-3" style="max-width: 540px;">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <img src="@/assets/catalogo foto.jpg" class="card-img" alt="20px">
+      <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/PRODUCTOS%20ESIKA%2Fmaquillaje.jpg?alt=media&token=af5ec3dd-f0e2-4dd2-9e02-a7a2d8329143" class="card-img" alt="20px">
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Nombre producto</h5>
-        <p class="card-text">Precio</p>
-        <p class="card-text">Cantidad</p>
+        <h5 class="card-title">Set de Sombras</h5>
+        <p class="card-text">60.00</p>
+        <p class="card-text">1</p>
       </div>
     </div>
   </div>
