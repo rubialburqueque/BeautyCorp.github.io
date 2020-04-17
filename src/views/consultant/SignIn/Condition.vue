@@ -1,7 +1,21 @@
 <template>
   <div class="text-center">
-    <h2>Términos y condiciones</h2>
-    <p>
+    <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal"
+          data-target="#exampleModal">
+          </button>
+          <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+            <h4>Términos y condiciones</h4>
+            </div>
+            <div class="modal-body">
+    <div class="container">
+    <p class="text-justify">
+      <small class="text-muted">
         Los siguientes términos y condiciones (los "Términos y Condiciones") rigen el uso que usted
         le dé a este sitio web y a cualquiera de los contenidos disponibles por o a través de este
         sitio web, incluyendo cualquier contenido derivado del mismo (el "Sitio Web").
@@ -11,8 +25,10 @@
         ACEPTA Y ESTÉ DE ACUERDO CON ESTOS TÉRMINOS Y CONDICIONES EN LO QUE SE REFIERE A SU USO DEL
         SITIO WEB. Si usted no está de acuerdo con estos Términos y Condiciones, no puede tener
         acceso al mismo ni usar el Sitio Web de ninguna otra manera.
-
-
+    </small>
+    </p>
+    <p class="text-justify">
+    <small class="text-muted">
         1.Derechos de Propiedad. Entre usted y Time Inc., Time Inc. es dueño único y exclusivo,
           de todos los derechos, título e intereses en y del Sitio Web, de todo el contenido
           (incluyendo, por ejemplo, audio, fotografías, ilustraciones, gráficos, otros medios
@@ -24,16 +40,20 @@
           morales, derechos sui generis y otras propiedades intelectuales y derechos patrimoniales
           del mismo. Su uso del Sitio Web no le otorga propiedad de ninguno de los contenidos,
           códigos, datos o materiales a los que pueda acceder en o a través del Sitio Web.
-
-
+    </small>
+    </p>
+    <p class="text-justify">
+    <small class="text-muted">
         2.Licencia Limitada. Usted puede acceder y ver el contenido del Sitio Web desde su
           computadora o desde cualquier otro aparato y, a menos de que se indique de otra manera
           en estos Términos y Condiciones o en el Sitio Web, sacar copias o impresiones individuales
           del contenido del Sitio Web para su uso personal, interno únicamente. El uso del Sitio Web
           y de los servicios que se ofrecen en o a través del Sitio Web, son sólo para su uso
           personal, no comercial.
-
-
+    </small>
+        </p>
+    <p class="text-justify">
+    <small class="text-muted">
         3.Uso Prohibido. Cualquier distribución, publicación o explotación comercial o promocional
           del Sitio Web, o de cualquiera de los contenidos, códigos, datos o materiales en el Sitio
           Web, está estrictamente prohibida, a menos de que usted haya recibido el previo permiso
@@ -55,8 +75,10 @@
           derechos de autor y otras leyes de los Estados Unidos y de otros países, así como las
           leyes estatales aplicables, y puede ser sujeto a responsabilidad legal por dicho uso no
           autorizado.
-
-
+    </small>
+        </p>
+    <p class="text-justify">
+    <small class="text-muted">
         4.Marcas Comerciales. Las marcas comerciales, logos, marcas de servicios, marcas registradas
           (conjuntamente las "Marcas Comerciales") expuestas en el Sitio Web o en los contenidos
           disponibles a través del Sitio Web son Marcas Comerciales de Time Inc. registradas y no
@@ -72,11 +94,23 @@
           El mal uso de las Marcas Comerciales expuestas en el Sitio Web o en o a través de
           cualquiera de los servicios del Sitio Web está estrictamente prohibido.
 
-Estos Términos y Condiciones fueron corregidos 02/04/2020.
+          Estos Términos y Condiciones fueron corregidos 02/04/2020.
+    </small>
     </p>
   </div>
-</template>
+            </div>
+            <div class="modal-footer ">
+              <div class="text-center">
+              <button type="button" class="btn btn-primary"
+              data-dismiss="modal">ATRAS</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+  </div>
+</template>
 <script>
 export default {
   name: 'termsAndCoditions',
