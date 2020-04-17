@@ -1,4 +1,5 @@
 # beautycorp
+https://www.figma.com/file/2PwMhfIyUGpSusZyXspNZ6/Beautycorp?node-id=182%3A2
 
 ## Project setup
 ```
