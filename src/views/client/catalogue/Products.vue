@@ -13,6 +13,9 @@ import Burger from '@/components/Burger.vue';
 
 export default {
   name: 'Products',
+  created() {
+    this.$store.dispatch('bindEsika');
+  },
   components: {
     ComponentProduct,
     Header,

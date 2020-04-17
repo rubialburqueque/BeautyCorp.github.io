@@ -6,13 +6,13 @@
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="@/assets/catalogo foto.jpg" class=" w-40" alt="30px">
+                  <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/PRODUCTOS%2Fbody%20blooom.jpg?alt=media&token=990da41b-c9f7-4e04-bb61-dc39125be4cf">
                 </div>
                 <div class="carousel-item">
-                  <img src="@/assets/catalogo foto.jpg" class=" w-40" alt="30px">
+                  <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/PRODUCTOS%2Fperfume%20flyrty.jpg?alt=media&token=a6999531-6861-42bd-ad74-b41642dcc28e">
                 </div>
                 <div class="carousel-item">
-                  <img src="@/assets/cyzonne.jpg" class=" w-40" alt="30x">
+                  <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/PRODUCTOS%2Fstudio%20primer.jpg?alt=media&token=360b774e-7551-4bc4-97f7-f177134bb6a2">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls"
@@ -34,15 +34,15 @@
       </div>
       <ul class="list-group mb-3">
         <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0">Nombre del producto</h6>
+          <div v-for="(elemento, index) in dataEsika" :key="index.id">
+            <h6 class="my-0">{{ elemento.Nombre }}</h6>
             <div>
             <img src="@/assets/star.svg" alt="50x">
             <img src="@/assets/star.svg" alt="50x">
             <img src="@/assets/star.svg" alt="50x">
             <img src="@/assets/star.svg" alt="50x">
             </div>
-            <small class="text-muted">Descripcion del producto</small>
+            <small class="text-muted">{{ elemento.Description }}</small>
                     <div class="select is-rounded is-small">
                   <select>
                     <option value="1">1</option>
@@ -63,9 +63,9 @@
                   </select>
                   <ModalProduct/>
                 </div>
+                <strong>{{ elemento.Precio }}</strong>
           </div>
-          <strong>$20</strong>
-        </li>
+          </li>
       </ul>
   </div>
 </template>

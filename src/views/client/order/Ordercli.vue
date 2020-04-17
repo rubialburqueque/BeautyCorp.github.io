@@ -13,6 +13,9 @@ import Burger from '@/components/Burger.vue';
 
 export default {
   name: 'Ordercli',
+  created() {
+    this.$store.dispatch('bindEsika');
+  },
   components: {
     ComponentOrdercli,
     Header,
