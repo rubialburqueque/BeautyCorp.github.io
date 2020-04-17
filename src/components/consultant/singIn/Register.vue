@@ -39,8 +39,8 @@
         <br>
         <div class="checkbox mb-3">
         <label>
-        <input type="checkbox" v-model="termsAndCoditions"> He leido y acepto
-        <span><router-link to="/termsAndCoditions">términos y condiciones</router-link></span> y las
+        <input type="checkbox"> He leido y acepto
+        <Condition/> y las
           politicas de uso de datos personales
         </label>
         </div>
@@ -59,11 +59,13 @@
 <script>
 import { createCount, newConsulter } from '@/firebase/function-firebase';
 import WriteError from '@/components/Error.vue';
+import Condition from './Condition.vue';
 
 export default {
   name: 'Register',
   components: {
     WriteError,
+    Condition,
   },
   data() {
     return {
@@ -73,7 +75,6 @@ export default {
       lastName: '',
       phone: '',
       confirmPassword: '',
-      termsAndCoditions: null,
       error: '',
       code: '',
     };
@@ -81,8 +82,7 @@ export default {
   methods: {
     signIn() {
       // eslint-disable-next-line no-console
-      console.log('selected', this.termsAndCoditions);
-      if (this.completeName === '' || this.lastName === '' || this.email === '' || this.phone === '' || this.password === '' || this.confirmPassword === '' || this.termsAndCoditions == null || this.code === '') {
+      if (this.completeName === '' || this.lastName === '' || this.email === '' || this.phone === '' || this.password === '' || this.confirmPassword === '' || this.code === '') {
         this.error = 'Es necesario que todo los cuadros esten completos';
       } else {
         createCount(this.email, this.password)

@@ -2,7 +2,7 @@
   <div class="text-center">
     <!-- Button trigger modal -->
           <button type="button" class="btn btn-primary" data-toggle="modal"
-          data-target="#exampleModal">
+          data-target="#exampleModal">AGREGAR A LA BOLSA
           </button>
           <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
@@ -38,8 +38,9 @@
     <button type="button" class="btn btn-success"
     data-dismiss="modal">IR A BOLSA DE COMPRAS</button>
     <br>
+    <br>
     <button type="button" class="btn btn-outline-success"
-    data-dismiss="modal">IR A BOLSA DE COMPRAS</button>
+    data-dismiss="modal">SEGUIR COMPRANDO</button>
   </div>
   </div>
             </div>
