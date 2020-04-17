@@ -2,7 +2,7 @@
   <div class="text-center">
     <!-- Button trigger modal -->
           <button type="button" class="btn btn-primary" data-toggle="modal"
-          data-target="#exampleModal">
+          data-target="#exampleModal">TERMINOS Y CONDICIONES
           </button>
           <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
