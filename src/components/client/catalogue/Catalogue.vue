@@ -6,6 +6,8 @@
     <div class="col-md-4">
       <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/catalogo%20foto.jpg?alt=media&token=ba641412-658e-4ab3-a99b-aa26d3e273ab"
       class="card-img" >
+      <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/PRODUCTOS%20ESIKA%2Fmaquillaje.jpg?alt=media&token=af5ec3dd-f0e2-4dd2-9e02-a7a2d8329143"
+      class="card-img">
     </div>
     <div class="col-md-8">
       <div class="card-body">
