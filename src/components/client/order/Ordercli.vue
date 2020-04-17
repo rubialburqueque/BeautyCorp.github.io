@@ -2,7 +2,7 @@
 <div>
     <div class="text-center">
     <div class="container">
-    <h2 class="h3 mb-3 font-weight-normal">Resumen de tu Pedido</h2>
+    <h2 class="h3 mb-3 font-weight-normal">Mi bolsa de compras</h2>
     <br>
     <div class="card mb-3" style="max-width: 540px;">
   <div class="row no-gutters">
