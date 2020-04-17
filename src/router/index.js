@@ -37,6 +37,30 @@ const routes = [
     component: () => import(/* webpackChunkName: "register" */ '../views/consultant/SignIn/Register.vue'),
   },
   {
+    path: '/points',
+    name: 'Points',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "reset" */ '../views/consultant/orders/Points.vue'),
+  },
+  {
+    path: '/orders',
+    name: 'Orders',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "reset" */ '../views/consultant/orders/Orders.vue'),
+  },
+  {
+    path: '/clients',
+    name: 'clients',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "reset" */ '../views/consultant/orders/ListClients.vue'),
+  },
+  {
     path: '/products',
     name: 'Products',
     // route level code-splitting
@@ -91,19 +115,5 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 });
-/* router.beforeEach((to, from, next) => {
-  if (to.matched.some((ruta) => ruta.meta.requiresAuth)) {
-    const user = firebase.auth().currentUser;
-    if (user) {
-      next();
-    } else {
-      next({
-        name: 'Login',
-      });
-    }
-  } else {
-    next();
-  }
-}); */
 
 export default router;

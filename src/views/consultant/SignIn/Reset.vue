@@ -40,4 +40,7 @@ export default {
     padding: 15px;
     margin: auto;
     };
+::-webkit-input-placeholder {
+   text-align: center;
+};
 </style>

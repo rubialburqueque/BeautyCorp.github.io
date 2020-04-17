@@ -9,12 +9,18 @@
         id="navbarSupportedContent" v-bind:class="{ 'show': show }">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <router-link class="nav-link" to="/home">Home</router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <router-link class="nav-link" to="/points">Mis Puntos</router-link>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/clients">Pedidos</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/">SignOut</router-link>
+                </li>
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#"
                     id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -26,7 +32,7 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
-                </li>
+                </li> -->
 
             </ul>
         </div>

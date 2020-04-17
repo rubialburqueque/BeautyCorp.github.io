@@ -1,5 +1,6 @@
 <template>
 <div>
+  <HeaderBurger/>
     <div class="text-center">
     <div class="container">
     <h6 class="h3 mb-3 font-weight-normal">Cliente</h6>
@@ -47,7 +48,12 @@
 </template>
 
 <script>
-export default {
+import HeaderBurger from '@/components/HeaderBurger.vue';
 
+export default {
+  name: 'Orders',
+  components: {
+    HeaderBurger,
+  },
 };
 </script>

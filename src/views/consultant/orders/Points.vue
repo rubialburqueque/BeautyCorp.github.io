@@ -1,5 +1,6 @@
 <template>
 <div>
+    <HeaderBurger/>
     <div class="text-center">
     <div class="container">
     <h2 class="h3 mb-3 font-weight-normal">Mis Beauty puntos</h2>
@@ -20,7 +21,12 @@
 </template>
 
 <script>
-export default {
+import HeaderBurger from '@/components/HeaderBurger.vue';
 
+export default {
+  name: 'Points',
+  components: {
+    HeaderBurger,
+  },
 };
 </script>
