@@ -9,6 +9,7 @@ export default new Vuex.Store({
   state: {
     name: '',
     dataEsika: [],
+    dataOffert: [],
     consultent: [],
   },
   mutations: {
@@ -22,6 +23,7 @@ export default new Vuex.Store({
   },
   actions: {
     bindEsika: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('dataEsika', db.collection('Esika'))),
+    bindOfert: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('dataOffert', db.collection('Ofertas'))),
     getName(context, name) {
       context.commit('saveName', name);
     },

@@ -2,7 +2,6 @@
   <div>
     <div class="text-center">
         <div class="container">
-          <form class="form-signin" action="" @submit="checkForm"></form>
           <br>
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">

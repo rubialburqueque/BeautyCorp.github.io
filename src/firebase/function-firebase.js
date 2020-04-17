@@ -15,8 +15,10 @@ const newConsulter = (name, lastname, email, phone, code) => firebase.firestore(
 
 const getDataPersonal = () => firebase.firestore().collection('consulter').get();
 
-const signOff = () => firebase.auth.signOff();
+const SignOut = () => firebase.auth().signOff();
+
+const catalogueFirebase = () => firebase.firestore().collection('Ofertas').get();
 
 export {
-  singIn, createCount, newConsulter, getDataPersonal, signOff,
+  singIn, createCount, newConsulter, getDataPersonal, SignOut, catalogueFirebase,
 };
