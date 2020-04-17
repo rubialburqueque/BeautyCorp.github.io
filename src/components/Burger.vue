@@ -11,14 +11,14 @@
                 <li class="nav-item active">
                     <router-link class="nav-link" to="/home">Home</router-link>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <router-link class="nav-link" to="/points">Mis Puntos</router-link>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <router-link class="nav-link" to="/clients">Pedidos</router-link>
                 </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" to="/">SignOut</router-link>
+                <li class="nav-item active">
+                    <router-link class="nav-link" to="/">Salir</router-link>
                 </li>
                 <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#"

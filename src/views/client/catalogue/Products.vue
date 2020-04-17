@@ -9,7 +9,7 @@
 <script>
 import ComponentProduct from '@/components/client/catalogue/Products.vue';
 import Header from '@/components/Header.vue';
-import Burger from '@/components/Burger.vue';
+import Burger from '@/components/client/BurgerCli.vue';
 
 export default {
   name: 'Products',

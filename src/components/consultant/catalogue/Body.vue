@@ -22,6 +22,9 @@ export default {
       nameCosult: '',
     };
   },
+  created() {
+    this.$store.dispatch('bindOfert');
+  },
   methods: {
   },
 };
