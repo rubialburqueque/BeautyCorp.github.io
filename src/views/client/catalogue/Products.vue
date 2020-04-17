@@ -11,6 +11,9 @@ import Header from '@/components/Header.vue';
 
 export default {
   name: 'Products',
+  created() {
+    this.$store.dispatch('bindEsika');
+  },
   components: {
     ComponentProduct,
     Header,
