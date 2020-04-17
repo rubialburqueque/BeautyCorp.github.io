@@ -8,13 +8,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="@/assets/catalogo esika.jpg" class=" w-40" alt="30px">
+      <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/PRODUCTOS%20ESIKA%2Fcorporal%20pies.jpg?alt=media&token=48b9f06d-4ae6-4da4-8b15-f1710f9b2e7a" class="d-block w-100" alt="">
     </div>
     <div class="carousel-item">
-      <img src="@/assets/catalogo foto.jpg" class=" w-40" alt="30px">
+      <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/PRODUCTOS%20ESIKA%2Fcorporal%20pies.jpg?alt=media&token=48b9f06d-4ae6-4da4-8b15-f1710f9b2e7a" class="d-block w-100" alt="">
     </div>
     <div class="carousel-item">
-      <img src="@/assets/cyzonne.jpg" class=" w-40" alt="30x">
+      <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/PRODUCTOS%20ESIKA%2Fcorporal%20pies.jpg?alt=media&token=48b9f06d-4ae6-4da4-8b15-f1710f9b2e7a" class="d-block w-100" alt="">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -26,7 +26,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<br>
+        <br>
         <div class="checkbox mb-3">
           <h6>Esika</h6>
           <button class="btn btn-primary btn-block">COMPARTIR
