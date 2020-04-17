@@ -71,6 +71,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import ModalProduct from './ModalProduct.vue';
 // import firebase from 'firebase';
 
@@ -83,6 +84,11 @@ export default {
     return {
       picture: '',
     };
+  },
+  computed: {
+    ...mapState([
+      'dataEsika',
+    ]),
   },
   methods: {
     /* getImgUrl() {

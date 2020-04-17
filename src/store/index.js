@@ -24,22 +24,22 @@ export default new Vuex.Store({
     storeData(state, personal) {
       state.consultent.push(personal);
     },
-    increment(state, index){
-      state.pedido.productUnit[index].count++
+    increment(state, index) {
+      state.pedido.productUnit[index].count += 1;
     },
-    decrement(state, index){
-      state.pedido.productUnit[index].count--
+    decrement(state, index) {
+      state.pedido.productUnit[index].count -= 1;
     },
-    deleteProduct(state, x){
-      state.pedido.productUnit.splice(x,1)
-      },
-    sumarTodo(state, {value}){
-      state.pedido.total= value
-      },
+    deleteProduct(state, x) {
+      state.pedido.productUnit.splice(x, 1);
+    },
+    sumarTodo(state, { value }) {
+      state.pedido.total = value;
+    },
   },
   actions: {
     bindEsika: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('dataEsika', db.collection('Esika'))),
-    binconsulter: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('dataConsulter', db.collection('consulter'))),
+    bindconsulter: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('dataConsulter', db.collection('consulter'))),
     bindOfert: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('dataOffert', db.collection('Ofertas'))),
     bindCLientes: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('dataClientes', db.collection('Clientes'))),
     bindPremios: firestoreAction(({ bindFirestoreRef }) => bindFirestoreRef('dataPremios', db.collection('Premios'))),
@@ -53,12 +53,12 @@ export default new Vuex.Store({
     sumarTodo(context) {
       let totales = 0;
       context.state.pedido.productUnit.forEach((unit) => {
-        totales += unit.price*unit.count;
+        totales += unit.price * unit.count;
       });
-      const payload = {value: totales}
+      const payload = { value: totales };
       context.commit('sumarTodo', payload);
       // eslint-disable-next-line no-console
-      console.log(totales) ;
+      console.log(totales);
     },
   },
   modules: {
