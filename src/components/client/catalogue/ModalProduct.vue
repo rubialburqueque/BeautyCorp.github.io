@@ -35,12 +35,12 @@
 </div>
 <br>
     <div>
-    <button type="button" class="btn btn-success"
-    data-dismiss="modal">IR A BOLSA DE COMPRAS</button>
+    <router-link to="/ordercli" type="button" class="btn btn-success"
+    data-dismiss="modal">IR A BOLSA DE COMPRAS</router-link>
     <br>
     <br>
-    <button type="button" class="btn btn-outline-success"
-    data-dismiss="modal">SEGUIR COMPRANDO</button>
+    <router-link to="/catalogue" type="button" class="btn btn-outline-success"
+    data-dismiss="modal">SEGUIR COMPRANDO</router-link>
   </div>
   </div>
             </div>

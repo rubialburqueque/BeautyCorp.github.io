@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Burger/>
         <Header/>
         <ComponentOrdercli/>
     </div>
@@ -8,15 +7,16 @@
 
 <script>
 import ComponentOrdercli from '@/components/client/order/Ordercli.vue';
-import Header from '@/components/Header.vue';
-import Burger from '@/components/Burger.vue';
+import Header from '@/components/HeaderCli.vue';
 
 export default {
   name: 'Ordercli',
+  created() {
+    this.$store.dispatch('bindEsika');
+  },
   components: {
     ComponentOrdercli,
     Header,
-    Burger,
   },
 };
 </script>

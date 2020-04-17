@@ -15,5 +15,8 @@ export default {
     Header,
     LoginCustomer,
   },
+  created() {
+    this.$store.dispatch('bindconsulter');
+  },
 };
 </script>

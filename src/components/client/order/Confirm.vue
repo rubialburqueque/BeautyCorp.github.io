@@ -15,7 +15,8 @@
     <br>
     <br>
     <div class="checkbox mb-3">
-        <button class="btn btn-success btn-block">VOLVER AL CATÁLOGO</button>
+        <router-link to="/catalogue" class="btn btn-success btn-block">
+        VOLVER AL CATÁLOGO</router-link>
     </div>
     </div>
     </div>

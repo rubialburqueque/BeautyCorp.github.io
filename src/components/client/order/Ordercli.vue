@@ -10,14 +10,14 @@
       <img src="@/assets/catalogo foto.jpg" class="card-img" alt="20px">
     </div>
     <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Nombre producto</h5>
-        <p class="card-text">Precio</p>
-        <p class="card-text">Cantidad</p>
+      <div v-for="(elemento, index) in dataEsika" :key="index.id" class="card-body">
+        <h5 class="card-title">{{ elemento.Nombre }}</h5>
+        <strong class="card-text">{{ elemento.Precio }}</strong>
+        <p class="card-text">{{ elemento.cantidad }}</p>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <button class="btn btn-success btn-sm" >+</button>
-          <button class="btn btn-success btn-sm" >Número</button>
-          <button class="btn btn-success btn-sm" >-</button>
+          <button class="btn btn-primary btn-sm" >+</button>
+          <button class="btn btn-primary btn-sm" >{{ elemento.cantidad }}</button>
+          <button class="btn btn-primary btn-sm" >-</button>
         </div>
       </div>
     </div>
@@ -28,8 +28,10 @@
   <p class="card-title">Monton final a pagar:</p>
   </div>
     <div class="checkbox mb-3">
-    <button class="btn btn-success btn-block" >CONTINUAR
+    <button class="btn btn-success btn-block">REALIZAR PEDIDO
     </button>
+    <router-link to="/datos" class="btn btn-success btn-block">CONTINUAR
+    </router-link>
   </div>
   </div>
     </div>

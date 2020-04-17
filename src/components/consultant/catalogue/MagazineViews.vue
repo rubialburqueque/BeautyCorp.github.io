@@ -28,8 +28,7 @@
         <br>
         <div class="checkbox mb-3">
           <h6>Esika</h6>
-          <button class="btn btn-primary btn-block">COMPARTIR
-          </button>
+          <router-link to="/logincli" class="btn btn-primary btn-block">COMPARTIR</router-link>
         </div>
       </div>
     </div>

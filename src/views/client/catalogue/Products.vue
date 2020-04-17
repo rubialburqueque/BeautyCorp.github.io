@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <Burger/>
     <Header/>
     <ComponentProduct/>
   </div>
@@ -8,15 +7,16 @@
 
 <script>
 import ComponentProduct from '@/components/client/catalogue/Products.vue';
-import Header from '@/components/Header.vue';
-import Burger from '@/components/client/BurgerCli.vue';
+import Header from '@/components/HeaderCli.vue';
 
 export default {
   name: 'Products',
+  created() {
+    this.$store.dispatch('bindEsika');
+  },
   components: {
     ComponentProduct,
     Header,
-    Burger,
   },
 };
 </script>

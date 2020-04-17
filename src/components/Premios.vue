@@ -1,17 +1,20 @@
 <template>
   <div>
-  <div v-for="(elemento, index) in dataEsika" :key="index.id" class="card mb-3"
+    <h2 class="h3 mb-3 font-weight-normal">Premios</h2>
+    <br>
+    <br>
+  <div v-for="(elemento, index) in dataPremios" :key="index.id" class="card mb-3"
   style="max-width: 540px;">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/catalogo%20foto.jpg?alt=media&token=ba641412-658e-4ab3-a99b-aa26d3e273ab"
+      <img src="https://firebasestorage.googleapis.com/v0/b/beautycorp-a8012.appspot.com/o/PREMIOS%2Fvajilla.jpg?alt=media&token=df0d4728-c47c-462d-80c8-6ed363e372ac"
       class="card-img" >
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <p class="card-text">{{ elemento.Categoría }}</p>
-        <h5 class="card-title">{{ elemento.Nombre }}</h5>
-        <strong class="card-text">{{ elemento.Precio }}</strong>
+        <h5 class="card-title">{{ elemento.nombre }}</h5>
+        <p class="card-text">{{ elemento.descripcion }}</p>
+        <strong class="card-text">{{ elemento.precio }}</strong>
       </div>
     </div>
   </div>
@@ -31,7 +34,7 @@ export default {
   },
   computed: {
     ...mapState([
-      'dataEsika',
+      'dataPremios',
     ]),
   },
 };
@@ -47,3 +50,4 @@ export default {
     margin: auto;
     };
 </style>
+

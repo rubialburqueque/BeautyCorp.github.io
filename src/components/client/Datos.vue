@@ -23,14 +23,14 @@
         id="inputEmail" class="form-control" v-model="phone">
         <br>
         <h6>Direción</h6>
-        <label class="sr-only">Name</label>
-        <input type="texto" placeholder="Claudia Sofia"
-        id="inputEmail" class="form-control" v-model="completeName">
+        <label class="sr-only"></label>
+        <input type="texto" placeholder="Los alcanfores 548 - Surco"
+        id="inputText" class="form-control" v-model="completeName">
         <br>
         <h6>Referencia</h6>
-        <label class="sr-only">Name</label>
-        <input type="texto" placeholder="Claudia Sofia"
-        id="inputEmail" class="form-control" v-model="completeName">
+        <label class="sr-only"></label>
+        <input type="texto" placeholder="Altura de la av Carrillo cuadra 7"
+        id="inputText" class="form-control" v-model="completeName">
         <br>
         <br>
         <div class="checkbox mb-3">
@@ -42,8 +42,8 @@
         </div>
         <br>
         <div class="checkbox mb-3">
-          <button class="btn btn-lg btn-primary btn-block">CONTINUAR
-          </button>
+          <router-link to="/confirm" class="btn btn-lg btn-primary btn-block">CONTINUAR
+          </router-link>
         <br>
         </div>
       </div>

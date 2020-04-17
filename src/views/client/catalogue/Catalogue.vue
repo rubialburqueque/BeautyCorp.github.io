@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <Burger/>
     <Header/>
     <ComponentCatalogue/>
   </div>
@@ -8,8 +7,7 @@
 
 <script>
 import ComponentCatalogue from '@/components/client/catalogue/Catalogue.vue';
-import Header from '@/components/Header.vue';
-import Burger from '@/components/client/BurgerCli.vue';
+import Header from '@/components/HeaderCli.vue';
 
 export default {
   name: 'Products',
@@ -19,7 +17,6 @@ export default {
   components: {
     ComponentCatalogue,
     Header,
-    Burger,
   },
 };
 </script>

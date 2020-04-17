@@ -5,16 +5,17 @@
     <h2 class="h3 mb-3 font-weight-normal">Mis Pedidos</h2>
     <br>
     <br>
-    <div class="card mb-3" style="max-width: 540px;">
+    <div v-for="(elemento, index) in dataClientes" :key="index.id"
+    class="card mb-3" style="max-width: 540px;">
     <div class="row no-gutters">
       <div class="col-md-4">
         <img src="@/assets/cliente.svg" class="card-img" alt="20px">
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">(Nombre de consultora)</h5>
+          <h5 class="card-title">{{ elemento.nombre }}</h5>
           <p class="card-text">
-            <small class="text-muted">(Distrito donde vive consultora)</small>
+            <small class="text-muted">{{ elemento.distrito }}</small>
           </p>
         </div>
       </div>
